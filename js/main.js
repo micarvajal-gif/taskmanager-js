@@ -92,5 +92,19 @@ list.addEventListener('change', event => {
   task.completed = event.target.checked;
   persist();
 });
+// BÚSQUEDA, FILTRO Y ORDEN
+document.getElementById('search').addEventListener('input', event => {
+  view.query = event.target.value;
+  refresh();
+});
 
+document.getElementById('filter').addEventListener('change', event => {
+  view.filter = event.target.value;
+  refresh();
+});
+
+document.getElementById('sort').addEventListener('change', event => {
+  view.sort = event.target.value;
+  refresh();
+});
 init();
