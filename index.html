@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskManager</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>TaskManager</h1>
+    <div id="notification" class="notification hidden" role="alert"></div>
+
+    <section class="dashboard">
+      <div class="metric"><span id="metric-total">0</span><small>Total</small></div>
+      <div class="metric"><span id="metric-pending">0</span><small>Pendientes</small></div>
+      <div class="metric"><span id="metric-completed">0</span><small>Completadas</small></div>
+    </section>
+
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Nueva tarea...">
+      <select id="task-priority">
+        <option value="Alta">Alta</option>
+        <option value="Media" selected>Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <section class="controls">
+      <input type="search" id="search" placeholder="Buscar por título...">
+      <select id="filter">
+        <option value="all">Todas</option>
+        <option value="pending">Pendientes</option>
+        <option value="completed">Completadas</option>
+      </select>
+      <select id="sort">
+        <option value="date">Ordenar por fecha</option>
+        <option value="priority">Ordenar por prioridad</option>
+      </select>
+    </section>
+
+    <ul id="task-list"></ul>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
